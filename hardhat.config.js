@@ -29,6 +29,9 @@ module.exports = {
             runs: 200
           }
         }
+      },
+      {
+        version: "0.5.12",
       }
     ]
   },
@@ -41,6 +44,13 @@ module.exports = {
     mainnet:{
       url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_KEY}`,
       accounts: [process.env.MAINNET_PRIVKEY]
+    },
+    localhost:{
+      url: 'http://127.0.0.1:8545',
+      accounts: {
+        count: 20,
+        mnemonic: 'blanket van half dad seek square develop panel lake work physical engage',
+      },
     },
     fantom:{
       url: "https://rpc.ftm.tools/",
@@ -57,7 +67,8 @@ module.exports = {
     },
     ethFeed:{
       1:"0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
-      4:"0x8A753747A1Fa494EC906cE90E9f37563A8AF630e"
+      4:"0x8A753747A1Fa494EC906cE90E9f37563A8AF630e",
+      default:"0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
     },
     yfi: {
       1:"0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e"
@@ -73,7 +84,8 @@ module.exports = {
     },
     gov:{
       1:"0x926dF14a23BE491164dCF93f4c468A50ef659D5B",
-      4:0
+      4:0,
+      default:0
     },
     inv: {
       1: "0x41d5d79431a913c4ae7d69a668ecdfe5ff9dfb68",
@@ -81,15 +93,19 @@ module.exports = {
     },
     weth:{
       1:"0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      1337:"0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
     },
     invKeep3rFeed:{
       1:"0x39b1dF026010b5aEA781f90542EE19E900F2Db15",
     },
     stethEthFeed: {
       1:"0xAb55Bf4DfBf469ebfe082b7872557D1F87692Fe6"
-    },    
+    },
     deployer:{
       default:0
     },
+    deployer2: {
+      default: "0x3fcb35a1cbfb6007f9bc638d388958bc4550cb28"
+    }
   }
 };
